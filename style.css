@@ -7,14 +7,25 @@
 
 main {
   min-height: 100vh;
-  width: 90%;
-  box-shadow: 0px 0px 20px 5px black;
-  margin: 0 auto;
-  background-color: #bbb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: rgb(5, 10, 13);
 }
 
-div {
-  display: inline-block;
+section.infoAboutGame p {
+  margin-left: 40px;
+  font-size: 40px;
+  color: rgba(240, 248, 255, 0.8);
+}
+
+section.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section.cards div {
   width: 200px;
   height: 200px;
   margin: 20px;
@@ -28,6 +39,7 @@ div {
 
 .show {
   transform: rotateY(180deg);
+  box-shadow: 0px 0px 25px red;
 }
 
 .delete {
@@ -35,11 +47,6 @@ div {
   cursor: default;
   width: 200px;
   height: 0px;
-}
-
-h1 {
-  padding: 10px;
-  font-size: 50px;
 }
 
 p.winGame {
