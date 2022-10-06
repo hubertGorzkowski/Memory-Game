@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  width: 90%;
+  box-shadow: 0px 0px 20px 5px black;
+  margin: 0 auto;
+  background-color: #bbb;
+}
+
+div {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-image: url(/photos/question-mark.jpg);
+  background-position: center;
+  background-size: cover;
+  font-size: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.show {
+  transform: rotateY(180deg);
+}
+
+.delete {
+  background-image: none;
+  cursor: default;
+  width: 200px;
+  height: 0px;
+}
+
+h1 {
+  padding: 10px;
+  font-size: 50px;
+}
+
+p.winGame {
+  position: absolute;
+  padding: 20px;
+  letter-spacing: 2px;
+  width: 100%;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+
+button.playAgain {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 35px;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.playAgain:hover {
+  background-color: #aaa;
+}
