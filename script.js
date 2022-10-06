@@ -58,7 +58,7 @@ const addPhotoToDiv = function () {
     elements[i].style.backgroundImage = `url(${images[randomNumbers[i]]})`;
     elements[i].textContent = `url(${images[randomNumbers[i]]})`;
     imagesOrder.push(`url(${images[randomNumbers[i]]})`);
-    elements[i].style.backgroundImage = `url(/photos/question-mark.jpg)`;
+    elements[i].style.backgroundImage = "url('/photos/question-mark.jpg')";
   }
 };
 
