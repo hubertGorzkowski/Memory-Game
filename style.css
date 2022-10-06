@@ -38,6 +38,7 @@ section.infoAboutGame p {
   margin: 0 40px;
   font-size: 40px;
   color: rgba(240, 248, 255, 0.8);
+  letter-spacing: 2px;
 }
 
 section.cards {
