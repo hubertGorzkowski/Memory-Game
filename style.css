@@ -13,7 +13,7 @@ main {
   background-color: rgb(5, 10, 13);
 }
 
-h1 {
+section.start h1 {
   text-align: center;
   padding-top: 20px;
   font-size: 40px;
@@ -22,7 +22,7 @@ h1 {
   letter-spacing: 2px;
 }
 
-h2 {
+section.start h2 {
   color: green;
   text-align: center;
   font-size: 28px;
@@ -116,4 +116,28 @@ h1.afterGame,
 h2.afterGame,
 p.afterGame {
   opacity: 0;
+}
+
+@media (max-width: 1220px) {
+  h1 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 40px;
+    color: red;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    color: green;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+
+  section.cards div {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+  }
 }
