@@ -51,7 +51,7 @@ section.cards div {
   width: 12vw;
   height: 12vw;
   margin: 20px;
-  background-image: url(/photos/question-mark.jpg);
+  background-image: url("/photos/question-mark.jpg");
   background-position: center;
   background-size: cover;
   font-size: 0;
