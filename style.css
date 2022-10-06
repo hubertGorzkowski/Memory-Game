@@ -79,9 +79,10 @@ p.winGame {
   font-size: 60px;
   width: 100%;
   text-align: center;
-  color: red;
+  color: rgb(163, 162, 162);
   letter-spacing: 2px;
   text-transform: uppercase;
+  box-shadow: 0px 0px 25px green;
   transition: 0.3s;
 }
 
@@ -92,7 +93,7 @@ button.playAgain {
   transform: translate(-50%, -50%);
   padding: 15px 20px;
   font-size: 34px;
-  color: red;
+  color: rgb(163, 162, 162);
   background-color: rgb(5, 10, 13);
   border: 2px solid rgb(240, 248, 255);
   letter-spacing: 1px;
@@ -101,8 +102,14 @@ button.playAgain {
 
 button.playAgain:hover {
   color: rgb(240, 248, 255);
-  border-color: red;
+  border-color: green;
   background-color: rgb(11, 25, 34);
+  box-shadow: 0px 0px 25px green;
+}
+
+button.playAgain:hover p.winGame {
+  box-shadow: 0px 0px 25px green;
+  color: red;
 }
 
 h1.afterGame,

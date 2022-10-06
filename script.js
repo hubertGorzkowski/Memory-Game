@@ -30,7 +30,7 @@ const images = [
 let visibleItems = 0;
 //tablica z elementami które mają klase Show
 let elementsShowClass = [];
-let score = 9;
+let score = 0;
 let round = 0;
 //tablica w której zapisywane są losowo liczby od 0-19, wykorzystywana do rozmieszczania obrazków
 let randomNumbers = [];
