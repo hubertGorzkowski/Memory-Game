@@ -2,8 +2,8 @@ document.onselectstart = function () {
   return false;
 };
 const elements = [...document.querySelectorAll("div")];
-const result = document.querySelector("h1.pairs");
-const rounds = document.querySelector("h1.rounds");
+const result = document.querySelector("p.pairs");
+const rounds = document.querySelector("p.rounds");
 const images = [
   "photos/car.jpeg",
   "photos/car.jpeg",
@@ -30,7 +30,7 @@ const images = [
 let visibleItems = 0;
 //tablica z elementami które mają klase Show
 let elementsShowClass = [];
-let score = 0;
+let score = 9;
 let round = 0;
 //tablica w której zapisywane są losowo liczby od 0-19, wykorzystywana do rozmieszczania obrazków
 let randomNumbers = [];
@@ -118,6 +118,12 @@ const checkGameEnd = function () {
     btn.classList.add("playAgain");
     document.body.appendChild(btn);
     btn.textContent = "Zagraj ponownie!";
+    const h1 = document.querySelector("h1");
+    const h2 = document.querySelector("h2");
+    h1.classList.add("afterGame");
+    h2.classList.add("afterGame");
+    rounds.classList.add("afterGame");
+    result.classList.add("afterGame");
     btn.addEventListener("click", reset);
   }
 };

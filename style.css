@@ -59,12 +59,12 @@ section.cards div {
   transition: 0.3s;
 }
 
-.show {
+section.cards div.show {
   transform: rotateY(180deg);
   box-shadow: 0px 0px 25px red;
 }
 
-.delete {
+section.cards div.delete {
   background-image: none;
   cursor: default;
   width: 200px;
@@ -73,14 +73,16 @@ section.cards div {
 
 p.winGame {
   position: absolute;
-  padding: 20px;
-  letter-spacing: 2px;
-  width: 100%;
-  text-align: center;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
   font-size: 60px;
+  width: 100%;
+  text-align: center;
+  color: red;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
 
 button.playAgain {
@@ -88,15 +90,23 @@ button.playAgain {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px 35px;
-  font-size: 40px;
-  text-transform: uppercase;
+  padding: 15px 20px;
+  font-size: 34px;
+  color: red;
+  background-color: rgb(5, 10, 13);
+  border: 2px solid rgb(240, 248, 255);
   letter-spacing: 1px;
-  background-color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 button.playAgain:hover {
-  background-color: #aaa;
+  color: rgb(240, 248, 255);
+  border-color: red;
+  background-color: rgb(11, 25, 34);
+}
+
+h1.afterGame,
+h2.afterGame,
+p.afterGame {
+  opacity: 0;
 }
