@@ -13,8 +13,29 @@ main {
   background-color: rgb(5, 10, 13);
 }
 
+h1 {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 40px;
+  color: red;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  color: green;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 4px;
+}
+
+section.infoAboutGame {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 section.infoAboutGame p {
-  margin-left: 40px;
+  margin: 0 40px;
   font-size: 40px;
   color: rgba(240, 248, 255, 0.8);
 }
