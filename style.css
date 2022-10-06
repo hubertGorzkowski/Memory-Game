@@ -9,7 +9,7 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   background-color: rgb(5, 10, 13);
 }
 
@@ -48,8 +48,8 @@ section.cards {
 }
 
 section.cards div {
-  width: 200px;
-  height: 200px;
+  width: 12vw;
+  height: 12vw;
   margin: 20px;
   background-image: url(/photos/question-mark.jpg);
   background-position: center;
@@ -118,26 +118,46 @@ p.afterGame {
   opacity: 0;
 }
 
-@media (max-width: 1220px) {
-  h1 {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 40px;
-    color: red;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+@media (max-width: 1200px) {
+  section.start h1 {
+    padding-top: 5px;
+    font-size: 32px;
   }
 
-  h2 {
-    color: green;
-    text-align: center;
-    font-size: 28px;
-    letter-spacing: 4px;
+  section.start h2 {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  section.infoAboutGame p {
+    margin: 0 30px;
+    font-size: 30px;
   }
 
   section.cards div {
-    width: 150px;
-    height: 150px;
+    width: 15vw;
+    height: 15vw;
     margin: 10px;
+  }
+}
+
+@media (max-width: 860px) {
+  section.start h1 {
+    padding-top: 3px;
+    font-size: 28px;
+  }
+
+  section.start h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  section.infoAboutGame p {
+    margin: 0 25px;
+    font-size: 24px;
+  }
+  section.cards div {
+    width: 17vw;
+    height: 17vw;
   }
 }
