@@ -69,18 +69,18 @@ const handleElements = function () {
       element.classList.add("delete");
     });
     score++;
-    result.textContent = `Pary: ${score}`;
+    result.textContent = `Pairs: ${score}`;
     checkGameEnd();
   }
 
   elements.forEach((element) => {
-    element.style.backgroundImage = `url(/photos/question-mark.jpg)`;
+    element.style.backgroundImage = "url('/photos/question-mark.jpg')";
     element.classList.remove("show");
     visibleItems = 0;
     elementsShowClass = [];
   });
   round++;
-  rounds.textContent = `Ruch: ${round}`;
+  rounds.textContent = `Move: ${round}`;
 };
 
 //funckja ktora odkrywa elementy
@@ -112,12 +112,12 @@ const checkGameEnd = function () {
   if (score === 10) {
     const p = document.createElement("p");
     p.classList.add("winGame");
-    p.innerText = `Brawo! Wygrałeś w ${round + 1} ruchach!`;
+    p.innerText = `Congratulations! You won in ${round + 1} moves!`;
     document.body.appendChild(p);
     const btn = document.createElement("button");
     btn.classList.add("playAgain");
     document.body.appendChild(btn);
-    btn.textContent = "Zagraj ponownie!";
+    btn.textContent = "Play again!";
     const h1 = document.querySelector("h1");
     const h2 = document.querySelector("h2");
     h1.classList.add("afterGame");
