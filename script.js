@@ -58,7 +58,7 @@ const addPhotoToDiv = function () {
     elements[i].style.backgroundImage = `url(${images[randomNumbers[i]]})`;
     elements[i].textContent = `url(${images[randomNumbers[i]]})`;
     imagesOrder.push(`url(${images[randomNumbers[i]]})`);
-    elements[i].style.backgroundImage = "url('/photos/question-mark.jpg')";
+    elements[i].style.backgroundImage = "url('photos/question-mark.jpg')";
   }
 };
 
@@ -74,7 +74,7 @@ const handleElements = function () {
   }
 
   elements.forEach((element) => {
-    element.style.backgroundImage = "url('/photos/question-mark.jpg')";
+    element.style.backgroundImage = "url('photos/question-mark.jpg')";
     element.classList.remove("show");
     visibleItems = 0;
     elementsShowClass = [];
