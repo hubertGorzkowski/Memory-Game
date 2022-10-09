@@ -65,10 +65,7 @@ section.cards div.show {
 }
 
 section.cards div.delete {
-  background-image: none;
-  cursor: default;
-  width: 200px;
-  height: 0px;
+  z-index: -3;
 }
 
 p.winGame {
