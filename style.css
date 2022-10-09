@@ -48,9 +48,9 @@ section.cards {
 }
 
 section.cards div {
-  width: 12vw;
-  height: 12vw;
-  margin: 20px;
+  width: 10vw;
+  height: 10vw;
+  margin: 15px;
   background-image: url("photos/question-mark.jpg");
   background-position: center;
   background-size: cover;
@@ -132,9 +132,17 @@ p.afterGame {
   }
 
   section.cards div {
-    width: 15vw;
-    height: 15vw;
+    width: 12vw;
+    height: 12vw;
     margin: 10px;
+  }
+}
+
+@media (max-width: 1100px) {
+  section.cards div {
+    width: 14vw;
+    height: 14vw;
+    margin: 7px;
   }
 }
 
@@ -158,6 +166,24 @@ p.afterGame {
   }
 }
 
+@media (max-width: 650px) {
+  section.start h1 {
+    font-size: 26px;
+  }
+
+  section.start h2 {
+    font-size: 18px;
+  }
+
+  section.infoAboutGame p {
+    font-size: 22px;
+  }
+  section.cards div {
+    width: 19vw;
+    height: 18vw;
+  }
+}
+
 @media (max-width: 400px) {
   section.start h1 {
     font-size: 24px;
@@ -173,18 +199,21 @@ p.afterGame {
   }
 }
 
-@media (orientation: landscape) and (max-width: 915px) {
+@media (orientation: landscape) and (max-height: 414px) {
   section.start h1 {
-    font-size: 20px;
+    font-size: 26px;
+  }
+
+  section.start h2 {
+    font-size: 22px;
   }
 
   section.infoAboutGame p {
-    font-size: 18px;
+    font-size: 20px;
   }
-
   section.cards div {
-    width: 10vw;
-    height: 10vw;
+    width: 11vw;
+    height: 11vw;
   }
 }
 
@@ -192,5 +221,88 @@ p.afterGame {
   section.cards div {
     width: 11vw;
     height: 11vw;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 1368px) {
+  section.start h1 {
+    font-size: 40px;
+  }
+
+  section.start h2 {
+    font-size: 34px;
+  }
+
+  section.infoAboutGame p {
+    font-size: 30px;
+  }
+  section.cards div {
+    width: 20vw;
+    height: 20vw;
+    margin: 12px;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 915px) {
+  section.cards div {
+    width: 21vw;
+    height: 21vw;
+    margin: 10px;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 740px) {
+  section.start h1 {
+    font-size: 22px;
+  }
+
+  section.start h2 {
+    font-size: 18px;
+  }
+
+  section.infoAboutGame p {
+    font-size: 18px;
+  }
+
+  section.cards div {
+    width: 24vw;
+    height: 24vw;
+    margin: 8px;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 720px) and (max-width: 540px) {
+  section.cards div {
+    width: 20vw;
+    height: 20vw;
+    margin: 8px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 720px) and (max-height: 540px) {
+  section.cards div {
+    width: 13vw;
+    height: 13vw;
+    margin: 8px;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 280px) {
+  section.start h1 {
+    font-size: 24px;
+  }
+
+  section.start h2 {
+    font-size: 20px;
+  }
+
+  section.infoAboutGame p {
+    font-size: 20px;
+  }
+
+  section.cards div {
+    width: 22vw;
+    height: 22vw;
+    margin: 7px;
   }
 }
