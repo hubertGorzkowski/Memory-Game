@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Alkalami", serif;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -26,7 +26,7 @@ section.start h2 {
   color: green;
   text-align: center;
   font-size: 28px;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 section.infoAboutGame {
