@@ -26,6 +26,7 @@ const images = [
   "photos/cosmos.jpg",
   "photos/cosmos.jpg",
 ];
+const main = document.querySelector("main");
 //zmienna przechowuje informacje o ilości odkrytych kart
 let visibleItems = 0;
 //tablica z elementami które mają klase Show
@@ -109,7 +110,8 @@ const reset = function () {
 
 //funckja ktora sprawdza czy gra zostala zakonczona
 const checkGameEnd = function () {
-  if (score === 10) {
+  if (score === 1) {
+    main.style.opacity = "0";
     const p = document.createElement("p");
     p.classList.add("winGame");
     p.innerText = `Congratulations! You won in ${round + 1} moves!`;
@@ -118,13 +120,6 @@ const checkGameEnd = function () {
     btn.classList.add("playAgain");
     document.body.appendChild(btn);
     btn.textContent = "Play again!";
-    const h1 = document.querySelector("h1");
-    const h2 = document.querySelector("h2");
-    h1.classList.add("afterGame");
-    h2.classList.add("afterGame");
-    rounds.classList.add("afterGame");
-    result.classList.add("afterGame");
-    btn.addEventListener("click", reset);
   }
 };
 
