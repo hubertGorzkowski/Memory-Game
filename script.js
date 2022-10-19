@@ -110,11 +110,12 @@ const reset = function () {
 
 //funckja ktora sprawdza czy gra zostala zakonczona
 const checkGameEnd = function () {
-  if (score === 1) {
+  if (score === 10) {
     main.style.opacity = "0";
     const p = document.createElement("p");
     p.classList.add("winGame");
-    p.innerText = `Congratulations! You won in ${round + 1} moves!`;
+    p.innerText = `Congratulations!
+     You won in ${round + 1} moves!`;
     document.body.appendChild(p);
     const btn = document.createElement("button");
     btn.classList.add("playAgain");
