@@ -2,28 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  background-color: rgb(17, 34, 45);
+  font-family: "Pt sans", sans-serif;
 }
 
 main {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: rgb(17, 34, 45);
+  max-height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgba(45, 53, 75, 1) 5%,
+    rgb(69, 91, 134) 50%,
+    rgba(45, 53, 75, 1) 95%
+  );
   transition: 0.5s;
+  overflow: hidden;
 }
 
 section.start h1 {
   text-align: center;
   padding-top: 20px;
-  font-size: 40px;
+  font-size: 65px;
+  transform: rotate(-2deg);
+  text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
   color: rgb(11, 21, 29);
-  text-shadow: 0px 0px 2px rgb(251, 251, 251);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -32,23 +33,25 @@ section.start h2 {
   color: rgb(184, 184, 184);
   text-shadow: 2px 2px 5px rgb(11, 5, 23);
   text-align: center;
-  font-size: 28px;
+  font-size: 35px;
+  transform: rotate(2deg);
   letter-spacing: 2px;
 }
 
 section.infoAboutGame {
-  display: flex;
-  justify-content: space-evenly;
+  position: fixed;
+  top: 4%;
+  left: 4%;
 }
 
 section.infoAboutGame p {
-  margin: 0 40px 30px;
   font-size: 40px;
   color: rgba(240, 248, 255, 0.8);
   letter-spacing: 2px;
 }
 
 section.cards {
+  margin-top: 7vh;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -67,12 +70,26 @@ section.cards div {
 }
 
 section.cards div.show {
-  transform: rotateY(180deg);
-  box-shadow: 0px 0px 25px red;
+  box-shadow: 0px 0px 25px black;
 }
 
 section.cards div.delete {
-  z-index: -3;
+  animation: deleteCards 0.6s 1 forwards;
+}
+
+@keyframes deleteCards {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  40% {
+    transform: rotate(90deg) scale(1);
+  }
+  50% {
+    transform: rotate(90deg) scale(1);
+  }
+  100% {
+    transform: rotate(90deg) scale(0);
+  }
 }
 
 p.winGame {
