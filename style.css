@@ -106,14 +106,14 @@ section.afterGame {
 section.afterGame::before {
   content: "";
   box-shadow: 20px 40px 2px 2px rgb(10, 10, 10);
-  padding-bottom: 300px;
+  padding-bottom: 350px;
   margin: 20px;
 }
 
 section.afterGame::after {
   content: "";
   box-shadow: 50px 0px 2px 2px rgb(10, 10, 10);
-  padding-top: 200px;
+  padding-top: 220px;
   margin: 20px;
 }
 
