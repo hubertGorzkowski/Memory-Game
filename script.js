@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "photos/cosmos.jpg",
     "photos/cosmos.jpg",
   ];
-  const main = document.querySelector("main");
   //zmienna przechowuje informacje o ilości odkrytych kart
   let visibleItems = 0;
   //tablica z elementami które mają klase Show
@@ -82,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
       elementsShowClass = [];
     });
     round++;
-    rounds.textContent = `Move: ${round}`;
+    rounds.textContent = `Moves: ${round}`;
   };
 
   //funckja ktora odkrywa elementy
@@ -108,20 +107,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const reset = function () {
     window.location.reload();
   };
+  const resetGame = document.querySelector(".playAgain");
+  resetGame.addEventListener("click", reset);
 
   //funckja ktora sprawdza czy gra zostala zakonczona
   const checkGameEnd = function () {
     if (score === 10) {
-      main.style.opacity = "0";
-      const p = document.createElement("p");
-      p.classList.add("winGame");
-      p.innerText = `Congratulations!
-       You won in ${round + 1} moves!`;
-      document.body.appendChild(p);
-      const btn = document.createElement("button");
-      btn.classList.add("playAgain");
-      document.body.appendChild(btn);
-      btn.textContent = "Play again!";
+      const infoAboutGame = document.querySelector(".infoAboutGame");
+      infoAboutGame.style.opacity = "0";
+      const cards = document.querySelector(".cards");
+      cards.style.opacity = "0";
+      const afterGame = document.querySelector(".afterGame");
+      afterGame.style.opacity = "1";
+      afterGame.style.zIndex = "1";
+      const p = document.querySelector(".endGame");
+      p.innerHTML = `You won in <span>${round + 1}</span> moves!`;
     }
   };
 
